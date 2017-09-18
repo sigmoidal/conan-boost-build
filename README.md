@@ -1,7 +1,7 @@
 ## Boost.Build makes it easy to build C++ projects, everywhere
 
-[![Build Status](https://travis-ci.org/bincrafters/conan-boost-build.svg?branch=testing%2F1.65.1)](https://travis-ci.org/bincrafters/conan-boost-build)
-[![Build status](https://ci.appveyor.com/api/projects/status/v5iuw7v9rlse9chp/branch/master?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-boost-build/branch/testing%2F1.65.1)
+[![Build Status](https://travis-ci.org/bincrafters/conan-boost-build.svg?branch=stable%2F1.65.1)](https://travis-ci.org/bincrafters/conan-boost-build)
+[![Build status](https://ci.appveyor.com/api/projects/status/v5iuw7v9rlse9chp/branch/master?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-boost-build/branch/stable%2F1.65.1)
 
 [Conan.io](https://conan.io) package for [Boost.Build](https://github.com/boostorg/build) project
 
@@ -17,20 +17,20 @@ If your are in Windows you should run it from a VisualStudio console in order to
 
 ## Upload packages to server
 
-    $ conan upload Boost.Build/1.65.1@bincrafters/testing --all
+    $ conan upload Boost.Build/1.65.1@bincrafters/stable --all
 
 ## Reuse the packages
 
 ### Basic setup
 
-    $ conan install Boost.Build/1.65.1@bincrafters/testing
+    $ conan install Boost.Build/1.65.1@bincrafters/stable
 
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
 
     [requires]
-    Boost.Build/1.65.1@bincrafters/testing
+    Boost.Build/1.65.1@bincrafters/stable
 
     [generators]
     txt
