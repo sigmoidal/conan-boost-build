@@ -1,7 +1,8 @@
 ## Boost.Build makes it easy to build C++ projects, everywhere.
 
-[![Build Status](https://travis-ci.org/bincrafters/conan-boost-build.svg?branch=stable%2F1.64.0)](https://travis-ci.org/bincrafters/conan-boost-build)
-[![Build status](https://ci.appveyor.com/api/projects/status/v5iuw7v9rlse9chp/branch/master?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-boost-build/branch/stable%2F1.64.0)
+[![Build status](https://ci.appveyor.com/api/projects/status/v5iuw7v9rlse9chp/branch/stable/1.64.0?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-boost-build/branch/stable/1.64.0)
+[![Travis Status](https://travis-ci.org/bincrafters/conan-boost-build.svg?branch=stable%2F1.64.0)](https://travis-ci.org/bincrafters/conan-boost-build)
+[![Download](https://api.bintray.com/packages/bincrafters/public-conan/Boost.Build%3Abincrafters/images/download.svg?version=1.64.0%3Astable) ](https://bintray.com/bincrafters/public-conan/Boost.Build%3Abincrafters/1.64.0%3Astable/link)
 
 [Conan.io](https://conan.io) package for [Boost.Build](https://github.com/boostorg/build) project
 
@@ -35,11 +36,11 @@ If you handle multiple dependencies in your project is better to add a *conanfil
     [generators]
     txt
 
-Complete the installation of requirements for your project running:</small></span>
+Complete the installation of requirements for your project running:
 
     conan install .
 
 Project setup installs the library (and all his dependencies) and generates the files *conanbuildinfo.txt* with all the paths and variables that you need to link with your dependencies.
 
 ### License
-[Boost](LICENSE)
+[Boost](www.boost.org/LICENSE_1_0.txt)
