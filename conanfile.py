@@ -22,7 +22,15 @@ class BoostBuildConan(ConanFile):
         shutil.copyfile(
             os.path.join(self.conanfile_directory,'os.jam'),
             os.path.join('build','src','util','os.jam'))
-
+        
+        # patch msvc.jam to fix a problem in MSVC 14 detection
+        tools.download(r'https://raw.githubusercontent.com/sigmoidal/conan-boost-build/testing/1.65.1/patch/msvc.patch', 'msvc.patch');
+         
+        src_path = os.path.join(self.conanfile_directory, 'build')
+        jamfile_to_patch = os.path.join(src_path, 'src', 'tools', 'msvc.jam')
+        self.output.info("Patching: " + jamfile_to_patch)
+        tools.patch(base_path=os.path.join('build', 'src', 'tools'), patch_file="Jamfile.v2.patch") 
+            
     def build(self):
         command = "bootstrap" if self.settings.os == "Windows" else "./bootstrap.sh"
         build_dir = os.path.join(self.source_folder, "build")
