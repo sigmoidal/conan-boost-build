@@ -1,0 +1,11 @@
+--- msvc.jam	2017-07-21 14:48:07.000000000 +0300
++++ msvc_new.jam	2017-10-13 21:37:50.830837900 +0300
+@@ -1108,7 +1108,7 @@
+ 
+             for local c in $(cpu)
+             {
+-                exact-version ?= $(version) ;
++                exact-version = $(version) ;
+                 setup-$(c) = [ generate-setup-cmd $(exact-version) : $(command) : $(parent) : $(options) : $(c) : $(global-setup) : $(default-global-setup-options-$(c)) : $(default-setup-$(c)) ] ;
+             }
+             
